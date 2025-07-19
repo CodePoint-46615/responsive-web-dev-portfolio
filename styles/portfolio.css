@@ -257,15 +257,37 @@ footer input[type="submit"]{
 }
 
 /* responsive layout */
-.hide{
-    display: none;
-}
-
+/* For smaller device - Mobile Phone */
 @media screen and (max-width: 576px) {
-    .skill-container, .resume-container, footer, .information{
+    .skill-container, 
+    .resume-container, 
+    .banner,
+    footer, 
+    nav, 
+    nav > ul, 
+    .information{
         flex-direction: column;
     }
 
+    nav>ul{
+        gap: 10px;
+    }
+
+    header{
+        background-image: none;
+    }
+    .banner-profile-pic{
+        width: 100%;
+    }
+    .banner-description{
+        width: 100%;
+    }
+    .banner{
+        margin: 20px;
+    }
+    .banner, button{
+        margin-bottom: 10px;
+    } 
     footer, .about{
         padding: 20px;
     }
@@ -286,4 +308,33 @@ footer input[type="submit"]{
         gap: 0px;
     }
 
+}
+
+/* Medium Device - Tablet */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    
+    header{
+        width: 100%;
+    }
+    .banner{
+        flex-direction: column;
+    }
+    .about{
+        padding: 50px ;
+    }
+    .skill-container{
+        flex-wrap:wrap;
+    }
+    .resume-container{
+        flex-wrap: wrap;
+    }
+    footer{
+        padding: 20px;
+    }
+    footer input[type="text"], input[type="email"]{
+        width: calc(100% - 40px);
+    }
+    footer textarea{
+        width: calc( 100% - 40px);
+    }
 }
